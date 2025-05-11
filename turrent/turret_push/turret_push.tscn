@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg552nnmm85a1"]
+
+[ext_resource type="Script" uid="uid://btdpf8vchl6bt" path="res://turrent/turret_push/turret_push.gd" id="1_o2wo1"]
+[ext_resource type="PackedScene" uid="uid://dqxnhow10a2el" path="res://bullet/bullet_push/bullet_push.tscn" id="2_tkvgg"]
+[ext_resource type="Texture2D" uid="uid://bnxyhvc27qs63" path="res://图片/图片1/506901888611424593.png" id="3_k1l1l"]
+[ext_resource type="AudioStream" uid="uid://djdftj0xtjtot" path="res://muisc/可供使用的音乐素材/发射的声音——嗖一声 许可CC0 作者冰宝 来源耳聆网 httpswww.ear0.comsound16579/射箭声音.wav" id="4_k1l1l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4g4sj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_k1l1l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_khcpj"]
+
+[node name="turret_push" type="Area2D"]
+script = ExtResource("1_o2wo1")
+bullet_scene = ExtResource("2_tkvgg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_4g4sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_khcpj")
+
+[node name="SoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_k1l1l")
+volume_db = 24.0
+pitch_scale = 0.59

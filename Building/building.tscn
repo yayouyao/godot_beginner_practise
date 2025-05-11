@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgg25qsrodobg"]
+
+[ext_resource type="Script" uid="uid://wffvmtfb58av" path="res://Building/building.gd" id="1_yu58x"]
+[ext_resource type="Texture2D" uid="uid://cspi5sroev85c" path="res://图片/Free_Chicken_House.png" id="2_yu58x"]
+[ext_resource type="AudioStream" uid="uid://cj2ajqltq1mjg" path="res://muisc/可供使用的音乐素材/升级——升级效果 许可CC0 作者ZJAY 来源耳聆网 httpswww.ear0.comsound35929/升级效果_耳聆网_[声音ID：35929].wav" id="3_7apmt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yu58x"]
+size = Vector2(128, 128)
+
+[node name="Building" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_yu58x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.7, -0.0360031)
+scale = Vector2(2.52917, 2.5015)
+texture = ExtResource("2_yu58x")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_yu58x")
+
+[node name="SoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7apmt")
+volume_db = -10.0
+pitch_scale = 0.73

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4tpopxsg55j7"]
+
+[ext_resource type="Script" uid="uid://dmfo68t5pq1bg" path="res://ui/damage_number/damage_number.gd" id="1_x0fvt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uchin"]
+
+[node name="DamageNumber" type="Node2D"]
+script = ExtResource("1_x0fvt")
+
+[node name="TextLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"
+label_settings = SubResource("LabelSettings_uchin")
+horizontal_alignment = 1
+vertical_alignment = 1

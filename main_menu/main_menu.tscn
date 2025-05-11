@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmtitk0ubrqvg"]
+
+[ext_resource type="Script" uid="uid://dqjjwtmldtuwc" path="res://main_menu/main_menu.gd" id="1_n3nn0"]
+[ext_resource type="Texture2D" uid="uid://d20u25esm1uwi" path="res://图片/封面.png" id="2_d3a7t"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n3nn0")
+
+[node name="MenuButtons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 283.0
+offset_right = 585.0
+offset_bottom = 355.0
+alignment = 1
+
+[node name="StartGameButton" type="Button" parent="MenuButtons"]
+visible = false
+layout_mode = 2
+text = "开始游戏"
+
+[node name="SettingsButton" type="Button" parent="MenuButtons"]
+visible = false
+layout_mode = 2
+text = "设置"
+
+[node name="CreditsButton" type="Button" parent="MenuButtons"]
+visible = false
+layout_mode = 2
+text = "致谢名单"
+
+[node name="QuitButton" type="Button" parent="MenuButtons"]
+visible = false
+layout_mode = 2
+text = "退出游戏"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(956.5, 451)
+scale = Vector2(1.08944, 1.08)
+texture = ExtResource("2_d3a7t")

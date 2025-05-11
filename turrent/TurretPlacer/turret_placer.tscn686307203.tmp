@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://co0qkinr50ddh"]
+
+[ext_resource type="Script" uid="uid://cm4dmrknn47da" path="res://turrent/TurretPlacer/turret_placer.gd" id="1_ar3vc"]
+[ext_resource type="PackedScene" uid="uid://dvceaqhcol4dk" path="res://turrent/turrent1/player1.tscn" id="2_o5mer"]
+[ext_resource type="PackedScene" uid="uid://22gejows6kih" path="res://turrent/turrent2/player2.tscn" id="3_w7yh7"]
+[ext_resource type="Texture2D" uid="uid://cvs7rtcl5kt7c" path="res://图片/icon.svg" id="4_l0ixp"]
+
+[node name="TurretPlacer" type="Node2D"]
+script = ExtResource("1_ar3vc")
+normal_turret_scene = ExtResource("2_o5mer")
+heavy_turret_scene = ExtResource("3_w7yh7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_l0ixp")

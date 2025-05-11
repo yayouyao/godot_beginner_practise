@@ -1,0 +1,59 @@
+[gd_scene load_steps=13 format=3 uid="uid://bmh66f6f2v80q"]
+
+[ext_resource type="Script" uid="uid://dvy3r4ro18mvs" path="res://enemy/enemy_base/enemy_base.gd" id="1_on14k"]
+[ext_resource type="Texture2D" uid="uid://dnl54k22bw2cd" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack1.png" id="2_pti28"]
+[ext_resource type="Texture2D" uid="uid://nc7ydf1eybos" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack2.png" id="3_poru7"]
+[ext_resource type="Texture2D" uid="uid://cqquvxm2oxink" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack3.png" id="4_0y04m"]
+[ext_resource type="Texture2D" uid="uid://da78s2yjeykab" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack4.png" id="5_fbcan"]
+[ext_resource type="Texture2D" uid="uid://buhkk7rqv6k3b" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack5.png" id="6_io3o0"]
+[ext_resource type="Texture2D" uid="uid://cn86srqbld3md" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack6.png" id="7_xt67s"]
+[ext_resource type="Texture2D" uid="uid://ky04pdot0l6g" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack7.png" id="8_y7gcq"]
+[ext_resource type="Texture2D" uid="uid://j22ml8d7d0li" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack8.png" id="9_mucac"]
+[ext_resource type="Texture2D" uid="uid://pt75y2ekjbhl" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack9.png" id="10_mb7rn"]
+[ext_resource type="Texture2D" uid="uid://bqwjfft81eioi" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack10.png" id="11_nacr6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3v0q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pti28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_poru7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0y04m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fbcan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_io3o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xt67s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y7gcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mucac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mb7rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nacr6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="enemy_base" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_on14k")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c3v0q")

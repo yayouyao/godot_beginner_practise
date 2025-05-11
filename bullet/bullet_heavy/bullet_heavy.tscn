@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://iildayrdht2l"]
+
+[ext_resource type="Script" uid="uid://ilxshidylt2g" path="res://bullet/bullet_heavy/bullet_heavy.gd" id="1_c6svc"]
+[ext_resource type="Texture2D" uid="uid://bsj2cu48du107" path="res://图片/图片1/301206172049291441.png" id="2_c6svc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqncn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c6svc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bullet_heavy" type="Node2D"]
+z_index = 1
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_c6svc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(-2, -3)
+scale = Vector2(0.6, 0.958)
+sprite_frames = SubResource("SpriteFrames_qqncn")
+autoplay = "default"

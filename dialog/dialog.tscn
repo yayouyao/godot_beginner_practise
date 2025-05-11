@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://brj4dc84fhihn"]
+
+[ext_resource type="Script" uid="uid://bcbw0rhs00ldq" path="res://dialog/dialog.gd" id="1_ss5st"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wddsb"]
+
+[node name="TutorialDialog" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_ss5st")
+
+[node name="DialogPanel" type="PanelContainer" parent="."]
+offset_left = 414.0
+offset_top = 809.0
+offset_right = 1520.0
+offset_bottom = 1083.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wddsb")
+
+[node name="MessageLabel" type="Label" parent="DialogPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20

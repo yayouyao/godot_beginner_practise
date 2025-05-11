@@ -1,0 +1,158 @@
+[gd_scene load_steps=31 format=3 uid="uid://dbs0unmyknieo"]
+
+[ext_resource type="Script" uid="uid://d2g0latyrwyqa" path="res://enemy/enemy2/enemy_fast.gd" id="1_jx8x8"]
+[ext_resource type="Texture2D" uid="uid://dnl54k22bw2cd" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack1.png" id="2_ynv6p"]
+[ext_resource type="Texture2D" uid="uid://nc7ydf1eybos" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack2.png" id="3_jnjq7"]
+[ext_resource type="Texture2D" uid="uid://cqquvxm2oxink" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack3.png" id="4_3rrrq"]
+[ext_resource type="Texture2D" uid="uid://da78s2yjeykab" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack4.png" id="5_s62gv"]
+[ext_resource type="Texture2D" uid="uid://buhkk7rqv6k3b" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack5.png" id="6_8f8ys"]
+[ext_resource type="Texture2D" uid="uid://cn86srqbld3md" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack6.png" id="7_ok62b"]
+[ext_resource type="Texture2D" uid="uid://ky04pdot0l6g" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack7.png" id="8_q3x83"]
+[ext_resource type="Texture2D" uid="uid://j22ml8d7d0li" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack8.png" id="9_t0hci"]
+[ext_resource type="Texture2D" uid="uid://pt75y2ekjbhl" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack9.png" id="10_gdu1i"]
+[ext_resource type="Texture2D" uid="uid://bqwjfft81eioi" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Attack/Knight_attack10.png" id="11_l16et"]
+[ext_resource type="Texture2D" uid="uid://uyhi637lyyem" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death1.png" id="12_v3e8e"]
+[ext_resource type="Texture2D" uid="uid://qpvq7i0nys0m" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death2.png" id="13_88nk5"]
+[ext_resource type="Texture2D" uid="uid://bjll54eu7fes1" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death3.png" id="14_3jedf"]
+[ext_resource type="Texture2D" uid="uid://cnf41ugh157j5" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death4.png" id="15_lhkvw"]
+[ext_resource type="Texture2D" uid="uid://4pacpbbf15f7" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death5.png" id="16_mkiw7"]
+[ext_resource type="Texture2D" uid="uid://ib68vxac621k" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death6.png" id="17_3bqrq"]
+[ext_resource type="Texture2D" uid="uid://2ufkuhctc2ha" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death7.png" id="18_f7627"]
+[ext_resource type="Texture2D" uid="uid://dmjui2asfjhhq" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death8.png" id="19_mjqec"]
+[ext_resource type="Texture2D" uid="uid://csamq55hv07vu" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death9.png" id="20_rwp25"]
+[ext_resource type="Texture2D" uid="uid://c8donsi5ne850" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death10.png" id="21_ph5hp"]
+[ext_resource type="Texture2D" uid="uid://c55jhbesyqkbw" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Death/Knight_death11.png" id="22_84ltb"]
+[ext_resource type="Texture2D" uid="uid://cqowbtsecsbup" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Gallop/Knight_gallop1.png" id="23_w6xom"]
+[ext_resource type="Texture2D" uid="uid://c41chf3cwk58" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Gallop/Knight_gallop2.png" id="24_skvnn"]
+[ext_resource type="Texture2D" uid="uid://ce5eh0q44kfj" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Gallop/Knight_gallop3.png" id="25_58ei4"]
+[ext_resource type="Texture2D" uid="uid://dvsnnct3lm75x" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Gallop/Knight_gallop4.png" id="26_sorrh"]
+[ext_resource type="Texture2D" uid="uid://jsvl8mfqudbg" path="res://图片/角色/骑兵多个动作/Knight_and_Horse/Gallop/Knight_gallop5.png" id="27_s7qo0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aimd8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ynv6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jnjq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3rrrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s62gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8f8ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ok62b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q3x83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t0hci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gdu1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l16et")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_v3e8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_88nk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3jedf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lhkvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mkiw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3bqrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_f7627")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mjqec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rwp25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ph5hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_84ltb")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_w6xom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_skvnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_58ei4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_sorrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_s7qo0")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2y5ps"]
+radius = 17.0294
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynv6p"]
+size = Vector2(27, 37)
+
+[node name="enemy_fast" type="Area2D" groups=["enemy"]]
+scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_jx8x8")
+speed = 200.0
+max_health = 50.0
+base_damage = 5.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -3.14159
+scale = Vector2(1.5, -1.5)
+sprite_frames = SubResource("SpriteFrames_aimd8")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.138658
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_2y5ps")
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-1.5, 2.5)
+shape = SubResource("RectangleShape2D_ynv6p")

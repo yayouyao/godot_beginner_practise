@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx0meu01rv4kl"]
+
+[ext_resource type="Script" uid="uid://cylfwvjyxcdm0" path="res://enemy/boss/boss.gd" id="1_lglxd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avair"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lglxd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="boss" type="Area2D"]
+script = ExtResource("1_lglxd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_avair")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lglxd")
+animation = &"idle"
+autoplay = "idle"

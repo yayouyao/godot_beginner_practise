@@ -1,0 +1,166 @@
+[gd_scene load_steps=17 format=3 uid="uid://dcyfxdnlpb15b"]
+
+[ext_resource type="Script" uid="uid://dtys185ub66gi" path="res://Main/main.gd" id="1_cao2i"]
+[ext_resource type="PackedScene" uid="uid://dopkstlytxnns" path="res://base/base.tscn" id="2_83486"]
+[ext_resource type="PackedScene" uid="uid://btd7uhlcp34q6" path="res://enemy/EnemySpawner/enemy_spawner.tscn" id="3_mm6o8"]
+[ext_resource type="PackedScene" uid="uid://co0qkinr50ddh" path="res://turrent/TurretPlacer/turret_placer.tscn" id="4_5f7td"]
+[ext_resource type="PackedScene" uid="uid://soqxna015gra" path="res://buttonhandler/button_handler.tscn" id="5_od4r1"]
+[ext_resource type="PackedScene" uid="uid://b36bgixi5fiy2" path="res://ui/ui_scence/ui.tscn" id="6_hn08s"]
+[ext_resource type="PackedScene" uid="uid://b4tpopxsg55j7" path="res://ui/damage_number/damage_number.tscn" id="7_o60nc"]
+[ext_resource type="PackedScene" uid="uid://brj4dc84fhihn" path="res://dialog/dialog.tscn" id="8_uhr2j"]
+[ext_resource type="Texture2D" uid="uid://bugl3dpqddbev" path="res://图片/ChatGPT Image 2025年5月7日 17_31_38.png" id="9_l5bfp"]
+[ext_resource type="PackedScene" uid="uid://bgg25qsrodobg" path="res://Building/building.tscn" id="12_f3gf5"]
+[ext_resource type="PackedScene" uid="uid://d10i2bewlnygg" path="res://turrent/TurretPlacer/PlacementZoneManager/PlacementZoneManager.tscn" id="13_rix8b"]
+[ext_resource type="PackedScene" uid="uid://crqejamup7txo" path="res://map/mini_map.tscn" id="14_0jx5h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rix8b"]
+font_color = Color(0.054902, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f3gf5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0jx5h"]
+font_color = Color(0.0431373, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhr2j"]
+font_color = Color(9.62615e-06, 0.899206, 0.899406, 1)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_cao2i")
+base_scene = ExtResource("2_83486")
+enemy_spawner_scene = ExtResource("3_mm6o8")
+turret_placer_scene = ExtResource("4_5f7td")
+button_handler_scene = ExtResource("5_od4r1")
+ui_scene = ExtResource("6_hn08s")
+damage_number = ExtResource("7_o60nc")
+tutorial_dialog_scene = ExtResource("8_uhr2j")
+
+[node name="ChatGptImage2025年5月7日173138" type="Sprite2D" parent="."]
+position = Vector2(1350.35, 300.778)
+rotation = 0.00312487
+scale = Vector2(3.26162, 2.12969)
+texture = ExtResource("9_l5bfp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, -1)
+scale = Vector2(3, 3)
+limit_left = -300
+limit_top = 0
+limit_right = 5000
+limit_bottom = 1500
+
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" type="Control" parent="PauseLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PauseLayer/PauseMenu"]
+layout_mode = 0
+offset_right = 1930.0
+offset_bottom = 1102.0
+color = Color(0.203922, 0.203922, 0.203922, 0.709804)
+
+[node name="PauseButtons" type="VBoxContainer" parent="PauseLayer/PauseMenu"]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 223.0
+offset_right = 893.0
+offset_bottom = 524.0
+alignment = 1
+
+[node name="RestartButton" type="Button" parent="PauseLayer/PauseMenu/PauseButtons"]
+layout_mode = 2
+text = "重新开始"
+
+[node name="MainMenuButton" type="Button" parent="PauseLayer/PauseMenu/PauseButtons"]
+layout_mode = 2
+text = "退回主菜单"
+
+[node name="building_group" type="Node2D" parent="."]
+
+[node name="Building3" parent="building_group" instance=ExtResource("12_f3gf5")]
+position = Vector2(-347, 919)
+
+[node name="Building4" parent="building_group" instance=ExtResource("12_f3gf5")]
+position = Vector2(-349, 115)
+
+[node name="Building" parent="building_group" instance=ExtResource("12_f3gf5")]
+position = Vector2(-347, 386)
+
+[node name="Building2" parent="building_group" instance=ExtResource("12_f3gf5")]
+position = Vector2(-348, 653)
+
+[node name="placement_group" type="Node2D" parent="."]
+
+[node name="PlacementZoneManager3" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(0, 200)
+
+[node name="PlacementZoneManager4" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(0, 350)
+
+[node name="PlacementZoneManager5" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(0, 500)
+
+[node name="PlacementZoneManager6" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(0, 650)
+
+[node name="PlacementZoneManager7" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(0, 800)
+
+[node name="PlacementZoneManager" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(-150, 700)
+
+[node name="PlacementZoneManager2" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(-150, 500)
+
+[node name="PlacementZoneManager8" parent="placement_group" instance=ExtResource("13_rix8b")]
+visible = true
+zone_position = Vector2(-150, 300)
+
+[node name="MiniMap" parent="." instance=ExtResource("14_0jx5h")]
+
+[node name="map" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -223.0
+offset_top = 772.0
+offset_right = -95.0
+offset_bottom = 800.0
+text = ">籍车专属后排位置<"
+label_settings = SubResource("LabelSettings_rix8b")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -858.0
+offset_top = 5.0
+offset_right = -701.0
+offset_bottom = 106.0
+text = "tips：控制籍车需要先按空格键，再单击左键来选择落点后发射"
+label_settings = SubResource("LabelSettings_f3gf5")
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -227.0
+offset_top = 364.0
+offset_right = -80.0
+offset_bottom = 392.0
+text = ">籍车专属后排位置<"
+label_settings = SubResource("LabelSettings_0jx5h")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -219.0
+offset_top = 571.0
+offset_right = -72.0
+offset_bottom = 599.0
+text = ">籍车专属后排位置<"
+label_settings = SubResource("LabelSettings_uhr2j")

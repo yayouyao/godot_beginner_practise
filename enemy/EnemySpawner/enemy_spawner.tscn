@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://btd7uhlcp34q6"]
+
+[ext_resource type="Script" uid="uid://rmxejx56n1ah" path="res://enemy/EnemySpawner/enemy_spawner.gd" id="1_t8uj2"]
+[ext_resource type="PackedScene" uid="uid://c8kxtlho7nml4" path="res://level/level/level_1.tscn" id="2_31a76"]
+
+[node name="EnemySpawner" type="Node2D" node_paths=PackedStringArray("spawn_marker") groups=["enemy_spawner"]]
+script = ExtResource("1_t8uj2")
+spawn_marker = NodePath("Marker2D")
+level_scene = ExtResource("2_31a76")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1211, 303)
+
+[node name="SoundPlayer" type="AudioStreamPlayer2D" parent="."]

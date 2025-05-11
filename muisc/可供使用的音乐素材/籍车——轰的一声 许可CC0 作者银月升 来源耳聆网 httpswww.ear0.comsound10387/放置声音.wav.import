@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4k1p5tdk7hhp"
+path="res://.godot/imported/放置声音.wav-d883ea9cc24fc1f29c12b5a377ad29ca.sample"
+
+[deps]
+
+source_file="res://muisc/可供使用的音乐素材/籍车——轰的一声 许可CC0 作者银月升 来源耳聆网 httpswww.ear0.comsound10387/放置声音.wav"
+dest_files=["res://.godot/imported/放置声音.wav-d883ea9cc24fc1f29c12b5a377ad29ca.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

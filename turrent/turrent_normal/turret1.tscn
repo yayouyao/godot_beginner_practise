@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvceaqhcol4dk"]
+
+[ext_resource type="Script" uid="uid://djfx7lfdxds0h" path="res://turrent/turrent_normal/turret1.gd" id="1_a5twa"]
+[ext_resource type="PackedScene" uid="uid://cwy35wa6c5jq7" path="res://bullet/bullet_base/bullet.tscn" id="2_a5twa"]
+[ext_resource type="Texture2D" uid="uid://b5p3j6eyv81j6" path="res://图片/图片1/微信图片_20250508201149.png" id="3_338fk"]
+[ext_resource type="AudioStream" uid="uid://djdftj0xtjtot" path="res://muisc/可供使用的音乐素材/发射的声音——嗖一声 许可CC0 作者冰宝 来源耳聆网 httpswww.ear0.comsound16579/射箭声音.wav" id="4_338fk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rkbax"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_338fk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
+radius = 140.071
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nmwkx"]
+radius = 595.818
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_338fk"]
+radius = 14.5
+
+[node name="turret" type="Area2D" groups=["turrent"]]
+z_index = 10
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_a5twa")
+kaderBullet_scene = ExtResource("2_a5twa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.5, -5)
+scale = Vector2(0.1, 0.09)
+sprite_frames = SubResource("SpriteFrames_rkbax")
+autoplay = "default"
+frame_progress = 0.280308
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g1dw6")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(-3, 4)
+shape = SubResource("CircleShape2D_nmwkx")
+
+[node name="SoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_338fk")
+volume_db = 24.0
+pitch_scale = 1.2
+attenuation = 1.6245
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 10
+position = Vector2(1, 9)
+shape = SubResource("CircleShape2D_338fk")

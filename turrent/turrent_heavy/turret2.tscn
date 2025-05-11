@@ -1,0 +1,98 @@
+[gd_scene load_steps=13 format=3 uid="uid://22gejows6kih"]
+
+[ext_resource type="Script" uid="uid://c8llks0u4aoqi" path="res://turrent/turrent_heavy/turret2.gd" id="1_lkqfo"]
+[ext_resource type="PackedScene" uid="uid://iildayrdht2l" path="res://bullet/bullet_heavy/bullet_heavy.tscn" id="2_dbd07"]
+[ext_resource type="Texture2D" uid="uid://bi5ecsfuogdpl" path="res://图片/图片1/429042531816447389_without_white_bg.png" id="3_slyon"]
+[ext_resource type="Texture2D" uid="uid://b3tslrvxj17wu" path="res://图片/07.png" id="4_dbd07"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahwgt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_slyon")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07nnu"]
+atlas = ExtResource("4_dbd07")
+region = Rect2(0, 207, 31, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53na4"]
+atlas = ExtResource("4_dbd07")
+region = Rect2(32, 207, 31, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk2iv"]
+atlas = ExtResource("4_dbd07")
+region = Rect2(64, 207, 31, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mywb"]
+atlas = ExtResource("4_dbd07")
+region = Rect2(96, 207, 31, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lkqfo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07nnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53na4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk2iv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mywb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l60r7"]
+atlas = ExtResource("4_dbd07")
+region = Rect2(0, 207, 31, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dbd07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l60r7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PlayerHeavy" type="Area2D" groups=["turrent"]]
+scale = Vector2(1.5, 1.5)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_lkqfo")
+bullet_scene = ExtResource("2_dbd07")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.9792, -1.31982)
+rotation = -3.14159
+scale = Vector2(0.1, -0.103)
+sprite_frames = SubResource("SpriteFrames_ahwgt")
+autoplay = "default"
+
+[node name="CursorSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lkqfo")
+autoplay = "default"
+frame_progress = 0.299826
+
+[node name="MarkerSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dbd07")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -24.0
+offset_top = 20.0
+offset_right = 29.0
+offset_bottom = 29.0
+fill_mode = 2
+show_percentage = false

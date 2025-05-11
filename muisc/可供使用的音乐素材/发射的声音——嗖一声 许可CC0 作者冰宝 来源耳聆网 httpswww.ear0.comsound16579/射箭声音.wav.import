@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djdftj0xtjtot"
+path="res://.godot/imported/射箭声音.wav-ebc58ad41c8460b27755a7b641d9e1d2.sample"
+
+[deps]
+
+source_file="res://muisc/可供使用的音乐素材/发射的声音——嗖一声 许可CC0 作者冰宝 来源耳聆网 httpswww.ear0.comsound16579/射箭声音.wav"
+dest_files=["res://.godot/imported/射箭声音.wav-ebc58ad41c8460b27755a7b641d9e1d2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

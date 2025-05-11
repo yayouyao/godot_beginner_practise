@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://blgchu6oe1awp"]
+
+[ext_resource type="Script" uid="uid://cci0qyibgdgs6" path="res://bullet/bullet_base/bullet.gd" id="1_mmtct"]
+[ext_resource type="Texture2D" uid="uid://b3tslrvxj17wu" path="res://图片/07.png" id="2_mmtct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvc0o"]
+atlas = ExtResource("2_mmtct")
+region = Rect2(0, 0, 15, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqncn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvc0o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqncn"]
+size = Vector2(66, 24)
+
+[node name="bullet_normal" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_mmtct")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+scale = Vector2(0.515625, 0.1875)
+sprite_frames = SubResource("SpriteFrames_qqncn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qqncn")

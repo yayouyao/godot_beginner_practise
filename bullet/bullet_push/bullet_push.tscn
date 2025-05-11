@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqxnhow10a2el"]
+
+[ext_resource type="Script" uid="uid://d1f1ovkv6fawe" path="res://bullet/bullet_push/bullet_push.gd" id="1_fr6ul"]
+[ext_resource type="Texture2D" uid="uid://bnxyhvc27qs63" path="res://图片/图片1/506901888611424593.png" id="2_x5dl4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5dl4"]
+size = Vector2(74.5, 409)
+
+[node name="bullet_push" type="Area2D"]
+collision_mask = 4
+script = ExtResource("1_fr6ul")
+speed = 400.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(8.28718, -8.85641)
+rotation = 5.31335
+scale = Vector2(0.235114, 0.195425)
+texture = ExtResource("2_x5dl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.75, -12.5)
+shape = SubResource("RectangleShape2D_x5dl4")

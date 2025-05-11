@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dopkstlytxnns"]
+
+[ext_resource type="Script" uid="uid://cqxjh8bv8b4y5" path="res://base/base.gd" id="1_mftly"]
+[ext_resource type="Texture2D" uid="uid://yfu6imgivpdb" path="res://图片/331-1_爱给网_aigei_com.png" id="2_1ggjv"]
+[ext_resource type="AudioStream" uid="uid://biggvamdpb8ag" path="res://muisc/可供使用的音乐素材/游戏失败音效 许可CC0 作者Vontell 来源耳聆网 httpswww.ear0.comsound12610/游戏失败音效_耳聆网_[声音ID：12610].wav" id="3_1ggjv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7viw"]
+size = Vector2(124, 1138.5)
+
+[node name="Base" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_mftly")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(311.5, 538.869)
+rotation = 6.1855
+scale = Vector2(8.41556, 8.80105)
+texture = ExtResource("2_1ggjv")
+
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = 189.0
+offset_top = 361.0
+offset_right = 341.0
+offset_bottom = 425.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(328, 534.75)
+shape = SubResource("RectangleShape2D_m7viw")
+
+[node name="SoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1ggjv")

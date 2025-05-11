@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwy35wa6c5jq7"]
+
+[ext_resource type="Script" uid="uid://cci0qyibgdgs6" path="res://bullet/bullet_base/bullet.gd" id="1_6rkac"]
+[ext_resource type="Texture2D" uid="uid://v5vapnulsmqg" path="res://图片/图片1/微信图片_20250508201115.png" id="2_qqncn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqncn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qqncn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqncn"]
+size = Vector2(66, 24)
+
+[node name="bullet" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+collision_mask = 4
+script = ExtResource("1_6rkac")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(-25, 23.95)
+rotation = -0.643836
+scale = Vector2(0.448365, 0.330499)
+sprite_frames = SubResource("SpriteFrames_qqncn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qqncn")

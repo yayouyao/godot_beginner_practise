@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://soqxna015gra"]
+
+[ext_resource type="Script" uid="uid://cpstk5ju6786p" path="res://buttonhandler/button_handler.gd" id="1_1hep3"]
+[ext_resource type="PackedScene" uid="uid://dvceaqhcol4dk" path="res://turrent/turrent_normal/turret1.tscn" id="2_kosfd"]
+[ext_resource type="PackedScene" uid="uid://22gejows6kih" path="res://turrent/turrent_heavy/turret2.tscn" id="3_aqnhp"]
+[ext_resource type="AudioStream" uid="uid://r5flvplcqf47" path="res://muisc/可供使用的音乐素材/叮 点击音效 UI界面_爱给网_aigei_com.mp3" id="4_aqnhp"]
+[ext_resource type="PackedScene" uid="uid://bg552nnmm85a1" path="res://turrent/turret_push/turret_push.tscn" id="4_y2l5r"]
+
+[node name="ButtonHandler" type="Node2D"]
+script = ExtResource("1_1hep3")
+normal_turret_scene = ExtResource("2_kosfd")
+heavy_turret_scene = ExtResource("3_aqnhp")
+push_turret_scene = ExtResource("4_y2l5r")
+
+[node name="TurretCard" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = -242.0
+offset_top = 947.0
+offset_right = -126.0
+offset_bottom = 1047.0
+text = "转射机
+（50）"
+
+[node name="HeavyTurretCard" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = -53.0
+offset_top = 949.0
+offset_right = 67.0
+offset_bottom = 1045.0
+text = "籍车
+(50)"
+
+[node name="PushTurretCard" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 131.0
+offset_top = 938.0
+offset_right = 274.0
+offset_bottom = 1045.0
+text = "滚木
+（50）"
+
+[node name="SoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_aqnhp")
+pitch_scale = 1.35
